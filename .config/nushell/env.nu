@@ -29,8 +29,8 @@ $env.PATH = (
 # Add environment variables.
 load-env {
   # Add CLI configuration.
-  "EDITOR": 'hx'
-  "PAGER": 'less'
+  "EDITOR": "hx"
+  "PAGER": "less"
   "MANPAGER": "sh -c 'col -bx | bat -l man -p'"
   "MANWIDTH": 999
   # Set bat theme.
@@ -38,7 +38,7 @@ load-env {
   # Set karabiner configuration path for goku.
   "GOKU_EDN_CONFIG_FILE": ($env.HOME | path join .config karabiner karabiner.edn)
   # Enable preview files with bat for fzf.
-  'FZF_CTRL_T_OPTS': "
+  "FZF_CTRL_T_OPTS": "
     --walker-skip .git,node_modules,target
     --preview 'bat -n --color=always {}'"
   # SDKMan! path.
@@ -49,7 +49,7 @@ load-env {
 }
 
 # Source the secrets.
-# source "$HOME/secrets/secret_exports.zsh"
+nu ($env.HOME | path join secrets secret_exports.nu)
 
 # Starship prompt setup.
 mkdir ~/.cache/starship
