@@ -1,3 +1,6 @@
+# Enable Starship prompt.
+use ~/.cache/starship/init.nu
+
 $env.config = {
     # Disable the welcome banner at startup.
     show_banner: false
