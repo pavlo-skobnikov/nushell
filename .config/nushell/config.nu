@@ -17,3 +17,30 @@ $env.config = {
     # Options: emacs, vi.
     edit_mode: vi # emacs, vi
 }
+
+# Aliases.
+# Confirm before overwriting something.
+alias cp = cp -i
+alias mv = mv -i
+alias rm = rm -i
+
+# Always colorize ripgrep output.
+alias rg = rg --color=auto
+
+# More insightful ls.
+alias lsa = ls -a
+alias lsl = ls -l
+alias lse = eza --group-directories-first --icons -lh --git -a
+alias lst = eza --group-directories-first --icons -lh --tree --level=2 -a
+
+# Replace cat with bat.
+alias cat = bat -pp
+# "Pretty" cat.
+alias catp = bat
+
+# Fzf with bat preview.
+alias fzfp = fzf --preview "bat --color=always --style=numbers --line-range=:500 {}"
+
+# Lazy tools.
+alias lg = lazygit
+alias ld = lazydocker
