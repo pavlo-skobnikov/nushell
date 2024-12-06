@@ -16,6 +16,18 @@ $env.config = {
 
     # Options: emacs, vi.
     edit_mode: vi # emacs, vi
+
+    completions: {
+        external: {
+            enable: true
+            max_results: 100
+            completer: {|spans|
+                fish --command $'complete "--do-complete=($spans | str join " ")"'
+                | from tsv --flexible --noheaders --no-infer
+                | rename value description
+            }
+        }
+    }
 }
 
 # Aliases.
