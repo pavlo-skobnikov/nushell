@@ -1,0 +1,10 @@
+\.git
+\.gitmodules
+\.gitignore
+
+LICENSE
+README.md
+
+.DS_Store
+
+nu_scripts/
