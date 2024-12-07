@@ -46,6 +46,8 @@ load-env {
   "FZF_CTRL_T_OPTS": "
     --walker-skip .git,node_modules,target
     --preview 'bat -n --color=always {}'"
+  # Hide Starship warnings.
+  "STARSHIP_LOG": "error"
   # Set up Java and Maven PATHs via SDKMAN
   "JAVA_HOME": ($env.SDKMAN_DIR | path join candidates java current)
   "M2_HOME": ($env.SDKMAN_DIR | path join candidates maven current)
