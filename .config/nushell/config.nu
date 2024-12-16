@@ -1,8 +1,8 @@
 # Enable Starship prompt.
 use ~/.cache/starship/init.nu
 
-# Meow? Meow!
-source ~/dotfiles/nushell/nu_scripts/themes/nu-themes/catppuccin-mocha.nu
+# 🐈
+source ~/dotfiles/nushell/nu_scripts/themes/src/custom-nu-themes/catppuccin-frappe.nu
 
 $env.config = {
     # Disable the welcome banner at startup.
