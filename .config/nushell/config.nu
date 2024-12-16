@@ -1,6 +1,7 @@
-# If the shell isn't running within Zellij, then attach to the `main` session.
-if $env.ZELLIJ? != "0" { 
-    zellij attach --create main options --default-cwd ~/
+# If the shell isn't running within Tmux, then attach to the `home` session
+# with the working directory of the current user's home root path.
+if $env.TERM_PROGRAM? != "tmux" { 
+    tmux new-session -A -s home -c ~/
 }
 
 # Enable Starship prompt.
