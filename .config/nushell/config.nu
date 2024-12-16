@@ -1,3 +1,8 @@
+# If the shell isn't running within Zellij, then attach to the `main` session.
+if $env.ZELLIJ? != "0" { 
+    zellij attach --create main options --default-cwd ~/
+}
+
 # Enable Starship prompt.
 use ~/.cache/starship/init.nu
 
