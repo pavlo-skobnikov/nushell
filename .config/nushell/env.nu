@@ -54,7 +54,9 @@ load-env {
 }
 
 # Source the secrets.
-nu ($env.HOME | path join secrets secret_exports.nu)
+# NOTE: The files is just a simple TOML file with simple definitions
+# (i.e. KEY = "VALUE") to allow dynamic loading of environment variables.
+$env.HOME | path join secrets secret_exports.toml | open | load-env
 
 # Starship prompt setup.
 mkdir ~/.cache/starship
